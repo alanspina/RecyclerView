@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.mainActivityRecyclerView);
         List<Personajes> personajesList = obtenerPersonajes();
         PersonajesAdapter personajesAdapter = new PersonajesAdapter(personajesList);
         recyclerView.setAdapter(personajesAdapter); //ACÁ ME TIRA ERROR DE QUE ESTA NULL EL ReciclerView
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
     }
 
