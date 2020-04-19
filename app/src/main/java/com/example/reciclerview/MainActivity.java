@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.mainActivityRecyclerView);
         List<Personajes> personajesList = obtenerPersonajes();
         PersonajesAdapter personajesAdapter = new PersonajesAdapter(personajesList);
-        recyclerView.setAdapter(personajesAdapter);
+        recyclerView.setAdapter(personajesAdapter); //ACÁ ME TIRA ERROR DE QUE ESTA NULL EL ReciclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
     }
